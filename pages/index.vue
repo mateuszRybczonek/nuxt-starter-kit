@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <logo />
+      <Logo />
       <h1 class="title">
         nuxt-starter-kit
       </h1>
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from '~/components/Logo/Logo.vue'
 
 export default {
   components: {

@@ -42,7 +42,7 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+    baseURL: process.env.HOST_URL || 'http://127.0.0.1:3030'
   },
 
   /*
