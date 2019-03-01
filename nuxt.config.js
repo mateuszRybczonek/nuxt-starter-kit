@@ -61,6 +61,27 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      config.output.globalObject = 'this'
+
+      const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
+
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/
+
+      config.module.rules.push({
+        test: /\.svg$/,
+        oneOf: [
+          {
+            resourceQuery: /inline/,
+            loader: 'vue-svg-loader'
+          },
+          {
+            loader: 'file-loader',
+            query: {
+              name: 'assets/[name].[hash:8].[ext]'
+            }
+          }
+        ]
+      })
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({

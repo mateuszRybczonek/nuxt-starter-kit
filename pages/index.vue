@@ -8,28 +8,19 @@
       <h2 class="subtitle">
         Nuxt Starter Kit
       </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
+      <CalendarIcon />
     </div>
   </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo/Logo.vue'
+import CalendarIcon from '~/assets/icons/calendar.svg?inline'
 
 export default {
   components: {
-    Logo
+    Logo,
+    CalendarIcon
   }
 }
 </script>
