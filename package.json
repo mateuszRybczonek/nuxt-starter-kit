@@ -9,9 +9,10 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "eslint --ext .js,.vue --ignore-pattern **/*.min.js .",
+    "lint:css": "stylelint '**/*.vue' '**/*.scss' --syntax scss",
     "precommit": "npm run lint",
-    "test": "ava **/*.test.js --verbose"
+    "test": "ava **/*.test.js --verbose --color"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
@@ -19,28 +20,33 @@
     "@nuxtjs/axios": "^5.3.6"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9",
     "@nuxtjs/eslint-config": "^0.0.1",
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "autoprefixer": "^8.6.4",
+    "ava": "^1.0.1",
     "babel-eslint": "^8.2.1",
+    "browser-env": "^3.2.5",
     "eslint": "^5.0.1",
+    "eslint-config-prettier": "^3.1.0",
     "eslint-config-standard": ">=12.0.0",
+    "eslint-loader": "^2.0.0",
     "eslint-plugin-import": ">=2.14.0",
     "eslint-plugin-jest": ">=21.24.1",
     "eslint-plugin-node": ">=7.0.1",
+    "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-promise": ">=4.0.1",
     "eslint-plugin-standard": ">=4.0.0",
-    "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^5.0.0",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-plugin-prettier": "2.6.2",
+    "nodemon": "^1.18.9",
     "prettier": "1.14.3",
-    "autoprefixer": "^8.6.4",
-    "tailwindcss": "^0.7.0",
-    "@vue/test-utils": "^1.0.0-beta.27",
-    "ava": "^1.0.1",
-    "browser-env": "^3.2.5",
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^0.1.1",
-    "require-extension-hooks-vue": "^2.0.0"
+    "require-extension-hooks-vue": "^2.0.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-declaration-use-variable": "^1.7.0",
+    "stylelint-order": "^2.0.0",
+    "stylelint-processor-html": "^1.0.0",
+    "tailwindcss": "^0.7.0"
   }
 }
