@@ -15,6 +15,8 @@ module.exports = {
     'prettier'
   ],
   rules: {
+    'padding-line-between-statements': 'error',
+    'prefer-const': 'error',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
