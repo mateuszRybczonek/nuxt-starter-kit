@@ -4,8 +4,8 @@
       USERS
     </h1>
     <ul class="users">
-      <li v-for="(user, index) in users" :key="index" class="user">
-        <nuxt-link :to="'users/' + index">
+      <li v-for="(user, index) in usersList" :key="index" class="user">
+        <nuxt-link :to="`users/${index}`">
           {{ user.name }}
         </nuxt-link>
       </li>
@@ -14,10 +14,15 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  async asyncData({ $axios }) {
-    const { data } = await $axios.get('/users')
-    return { users: data.data }
+  computed: {
+    ...mapState('users', ['usersList'])
+  },
+
+  async fetch({ store }) {
+    await store.dispatch('users/fetchUsers')
   }
 }
 </script>

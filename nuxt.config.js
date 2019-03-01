@@ -2,7 +2,9 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
-
+  env: {
+    apiUrl: process.env.API_URL || 'http://127.0.0.1:3030'
+  },
   /*
   ** Headers of the page
   */
@@ -48,7 +50,7 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    baseURL: process.env.HOST_URL || 'http://127.0.0.1:3030'
+    baseURL: process.env.API_URL || 'http://127.0.0.1:3030'
   },
 
   /*
