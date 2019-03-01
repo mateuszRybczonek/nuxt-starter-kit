@@ -10,3 +10,5 @@ hooks('vue')
 hooks(['vue', 'js'])
   .plugin('babel')
   .push()
+
+window.Date = global.Date = Date
