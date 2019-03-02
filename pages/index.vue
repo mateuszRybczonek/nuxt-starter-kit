@@ -16,6 +16,8 @@
         <li>tailwind</li>
         <li>stylelint</li>
         <li>husky</li>
+        <li>Travis CI</li>
+        <li>Rollbar</li>
       </ul>
       <br>
       <ul>

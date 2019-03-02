@@ -25,6 +25,7 @@
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
     "nuxt-sass-resources-loader": "^2.0.5",
+    "vue-rollbar": "^1.0.0",
     "vue-svg-loader": "^0.12.0",
     "vuex-pathify": "^1.1.3"
   },
